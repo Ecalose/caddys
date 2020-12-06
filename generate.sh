@@ -20,3 +20,6 @@ wget -qO $TMPFILE $URL && tar -zxvf $TMPFILE xcaddy && chmod +x xcaddy
 	--with github.com/mholt/caddy-l4 \
 	--with github.com/caddy-dns/cloudflare \
 	--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
+	
+# clean
+rm -rf go xcaddy
