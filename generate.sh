@@ -8,8 +8,8 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin:~/go/bin
 trap 'rm -f "$TMPFILE"' EXIT; TMPFILE=$(mktemp) || exit 1
 
 # go install
-wget -qO $TMPFILE https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
-tar -zxvf $TMPFILE
+#wget -qO $TMPFILE https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+#tar -zxvf $TMPFILE
 
 # xcaddy install
 URL="$(wget -qO- https://api.github.com/repos/caddyserver/xcaddy/releases/latest | grep -E "browser_download_url.*linux_amd64.tar.gz" | cut -f4 -d\")"
