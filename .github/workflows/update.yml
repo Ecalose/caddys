@@ -5,7 +5,7 @@ on:
     - cron: "10 22 * * *"
   push:
     branches:
-      - main
+      - master
     paths:
       - "generate.sh"
 jobs:
