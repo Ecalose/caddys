@@ -1,0 +1,28 @@
+name: update
+
+on:
+  schedule:
+    - cron: "10 22 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "generate.sh"
+jobs:
+  update:
+    if: github.repository == 'mixool/caddys'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v2
+
+      - name: update
+        run: |
+            bash generate.sh
+            
+      - name: push
+        run: |
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git commit -am "update"
+            git push -v --progress
