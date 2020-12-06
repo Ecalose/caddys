@@ -11,7 +11,7 @@ tar -zxvf $TMPFILE
 
 # xcaddy install
 URL="$(wget -qO- https://api.github.com/repos/caddyserver/xcaddy/releases/latest | grep -E "browser_download_url.*linux_amd64.tar.gz" | cut -f4 -d\")"
-wget -qO $TMPFILE $URL && tar -zxvf $TMPFILE && chmod +x xcaddy
+wget -qO $TMPFILE $URL && tar -zxvf $TMPFILE xcaddy && chmod +x xcaddy
 
 # xcaddy build
 ./xcaddy build \
