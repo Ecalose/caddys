@@ -2,7 +2,7 @@ name: update
 
 on:
   schedule:
-    - cron: "30 0 * * FRI"
+    - cron: "30 0 * * *"
   push:
     branches:
       - master

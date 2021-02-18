@@ -8,8 +8,8 @@ go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 
 # xcaddy build
 xcaddy build \
-	--with github.com/mholt/caddy-l4 \
-	--with github.com/caddy-dns/cloudflare \
-	--with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
+    --with github.com/mholt/caddy-l4 \
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/caddyserver/forwardproxy
 
 tar -czvf caddy.tar.gz caddy
