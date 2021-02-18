@@ -10,6 +10,6 @@ go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 xcaddy build \
     --with github.com/mholt/caddy-l4 \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/caddyserver/forwardproxy
+    --with github.com/klzgrad/forwardproxy@naive
 
 tar -czvf caddy.tar.gz caddy
