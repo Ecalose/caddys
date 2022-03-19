@@ -4,8 +4,7 @@
 # only for https://github.com/mixool/caddys
 ######
 
-# go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
-go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 
 # xcaddy build
 xcaddy build latest \
