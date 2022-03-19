@@ -9,14 +9,20 @@ go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 # xcaddy build
 xcaddy build latest \
     --with github.com/mholt/caddy-l4 \
+    --with github.com/kirsch33/realip \
     --with github.com/caddy-dns/cloudflare \
+    --with github.com/caddy-dns/route53 \
     --with github.com/mholt/caddy-webdav \
     --with github.com/caddyserver/forwardproxy@caddy2 \
+    --with github.com/greenpau/caddy-security \
     --output ./caddy-amd64
 export GOOS=linux GOARCH=arm64
 xcaddy build latest \
     --with github.com/mholt/caddy-l4 \
+    --with github.com/kirsch33/realip \
     --with github.com/caddy-dns/cloudflare \
+    --with github.com/caddy-dns/route53 \
     --with github.com/mholt/caddy-webdav \
     --with github.com/caddyserver/forwardproxy@caddy2 \
+    --with github.com/greenpau/caddy-security \
     --output ./caddy-arm64
