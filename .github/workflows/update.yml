@@ -31,4 +31,4 @@ jobs:
           artifacts: "./caddy-*"
           removeArtifacts: true
           allowUpdates: true
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
