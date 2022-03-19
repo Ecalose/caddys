@@ -1,8 +1,7 @@
 name: update
 
 on:
-  schedule:
-    - cron: "30 0 * * *"
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -10,7 +9,7 @@ on:
       - "generate.sh"
 jobs:
   update:
-    if: github.repository == 'mixool/caddys'
+    if: github.repository == 'ecalose/caddys'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codebase
@@ -26,3 +25,11 @@ jobs:
             git config --local user.name "GitHub Action"
             git commit -am "update"
             git push -v --progress
+      - 
+        name: release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./caddy-*"
+          removeArtifacts: true
+          allowUpdates: true
+          token: ${{ secrets.TOKEN }}
