@@ -15,7 +15,7 @@ xcaddy build latest \
     --with github.com/mholt/caddy-webdav \
     --with github.com/caddyserver/forwardproxy@caddy2 \
     --with github.com/greenpau/caddy-security \
-    --output ./caddy-amd64
+    --output ./caddy-x86_64
 export GOOS=linux GOARCH=arm64
 xcaddy build latest \
     --with github.com/mholt/caddy-l4 \
@@ -25,4 +25,4 @@ xcaddy build latest \
     --with github.com/mholt/caddy-webdav \
     --with github.com/caddyserver/forwardproxy@caddy2 \
     --with github.com/greenpau/caddy-security \
-    --output ./caddy-arm64
+    --output ./caddy-aarch64
