@@ -12,5 +12,11 @@ xcaddy build latest \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/mholt/caddy-webdav \
     --with github.com/caddyserver/forwardproxy@caddy2
-
-tar -czvf caddy.tar.gz caddy
+    --output ./caddy-amd64
+export GOOS=linux GOARCH=arm64
+xcaddy build latest \
+    --with github.com/mholt/caddy-l4 \
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/mholt/caddy-webdav \
+    --with github.com/caddyserver/forwardproxy@caddy2
+    --output ./caddy-arm64
